@@ -31,7 +31,7 @@ for (var i = 0; i < designs.length; i++) {
 		selectedDesign = this.querySelector('h3').innerHTML;
 		console.log('Selected Design: ' + selectedDesign);
         localStorage.setItem('seldesign',selectedDesign);
-        window.location.href= "gender.html";
+        window.location.href= "category.html";
 	});
 }
 
