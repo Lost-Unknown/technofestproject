@@ -1,0 +1,257 @@
+:root{
+    --abouthead: #ffffff;
+    --aboutpara: #e3e3e3;
+    --navtag: #ffffff;
+    --cname:#ffffff;
+    --line:#FAEAB1;
+    --background-1:#282828;
+    --background-2:#ffffff00;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    padding: 1rem 15% 1rem 15%;
+    position: absolute;
+    top: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+hr{
+    border-color: var(--line);
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------- Class --------------------- */
+
+.main{
+    background: linear-gradient(125deg,var(--background-1),#ffffff2f),url('https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80');
+    justify-content: center;
+    background-size: cover;
+    background-position: right;
+    align-items: LEFT;
+    margin: 0 auto 0 auto;
+    width: 100% ;
+    height: 100vh;
+}
+
+.shop-now{
+    padding: 0.7rem 5rem 0.7rem 5rem;
+    font-size: 2rem;
+    background: #6a6a6a58;
+    color: var(--abouthead);
+    border-color: #00000000;
+    width: 100%;
+}
+
+.shop-now:hover{
+    background: #96969686;
+}
+
+.grow{
+    flex-grow: 3 ;
+}
+
+.Cname{
+    padding: 0;
+    color: var(--cname);
+    margin: 0;
+}
+
+.nav-tag{
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    text-decoration: none;
+    color: var(--navtag);
+    font-size: 1.3rem;
+}
+
+.nav-tag:hover{
+    color: #d4d4d4;
+    border-radius: 30px;
+    background-color: rgba(240, 248, 255, 0.247);
+}
+
+.flex{
+    display: flex;
+}
+
+.no-pad{
+    padding: 0;
+}
+
+.no-mar{
+    margin: 0;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.padding-body{
+    padding: 1rem 15% 1rem 15%;
+}
+
+.about-head{
+    color: var(--abouthead);
+    font-size: 1.8rem;
+}
+
+.about-para{
+    color: var(--aboutpara);
+    font-size: 1.3rem;
+}
+
+.front{
+    animation-name: front-anim;
+    animation-duration: 1s;
+}
+
+.about-container{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.slide-left{
+    animation-name: slide-left;
+    animation-duration: 1s;
+}
+
+.slide-right{
+    animation-name: slide-right;
+    animation-duration: 1s;
+}
+
+.grid{
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 25%));
+    justify-content: center;
+    overflow-y:scroll;
+    height: 500px;
+}
+
+.products{
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 20%));
+    justify-content: center;
+    overflow-y:scroll;
+    height: 500px;
+}
+
+.selection{
+    width: 100%;
+    height: 14rem;
+    background: linear-gradient(0deg,#717171,#ffffff,#717171);
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 00px 1rem #000;
+}
+
+.color-img{
+    width: 100%;
+    height: 12rem;
+    border-radius: 5px;
+}
+
+.color-name{
+    margin: 5px 0 0 0;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+    position: absolute;
+    scale: 0;
+}
+
+.fprice{
+    padding-left: 1rem;
+}
+
+.price{
+    font-size: 1.5rem;
+}
+
+.rupee{
+    font-size: 1rem;
+}
+
+.creator{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 2rem;
+}
+
+/* ------------------------ Scroll Bar -------------------- */
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5rem;
+}
+   
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+   
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.288);
+    outline: 1px solid rgba(112, 128, 144, 0.29);
+    border-radius: 1rem;
+
+}
+
+.colors::-webkit-scrollbar {
+    width: 0.0;
+    height: 0.0rem;
+}
+
+/* ---------------------- Animations -------------------- */
+
+@keyframes front-anim{
+    from {
+        padding-top: 4rem;
+        filter: opacity(0);
+    }
+    to {
+        padding-top: 0rem;
+        filter: opacity(1);
+    }
+}
+
+@keyframes slide-left{
+    from {
+        padding-left: 4rem;
+        filter: opacity(0);
+    }
+    to {
+        padding-left: 0rem;
+        filter: opacity(1);
+    }
+}
+
+@keyframes slide-right{
+    from {
+        padding-right: 4rem;
+        filter: opacity(0);
+    }
+    to {
+        padding-rigth: 0rem;
+        filter: opacity(1);
+    }
+}
